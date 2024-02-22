@@ -1,5 +1,3 @@
-/* events.component.scss */
-
 /* Importieren Sie Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -21,16 +19,48 @@
 /* Logo container */
 .logo-container {
   padding: 20px;
+  position: relative; /* Stellen Sie sicher, dass die Position relativ ist, um das Absolute innerhalb davon zu positionieren */
 }
 
 /* Logo */
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 200px; /* Ändern Sie die Breite des Logos nach Bedarf */
+  height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Circle */
+.circle {
+  position: relative;
+  display: inline-block;
+}
+
+/* Logo Text */
+.logo-text {
+  position: absolute;
+  bottom: -35px; /* Platzieren Sie den Text 20px unterhalb des Logos */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px; /* Größe des Textes */
+  color: #3b5998; /* Textfarbe im Dunkelblau-Pastell */
+  font-family: 'Roboto', sans-serif; /* Schriftart */
+  text-align: center; /* Zentriert den Text */
+  width: 150px; /* Breite des Textes */
+  line-height: 1.2; /* Zeilenhöhe */
+  margin-bottom: 70px; /* Abstand nach unten hinzufügen */
+}
+
+
+
+
+
+/* Small Logo */
+.small-logo {
+  width: 50px; /* Ändern Sie die Breite des kleinen Logos nach Bedarf */
+  height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
 }
 
 /* Events container */
