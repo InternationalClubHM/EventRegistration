@@ -1,0 +1,62 @@
+/* events.component.css */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Logo container */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Logo */
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover; /* Maintain aspect ratio */
+  border: 3px solid #ffffff; /* White border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Menu container */
+.menu-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Menu */
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Menu item */
+.menu-item {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Menu item hover */
+.menu-item:hover {
+  background-color: #e0e0e0;
+}
