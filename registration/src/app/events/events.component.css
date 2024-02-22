@@ -11,14 +11,12 @@
 .main-container {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Zentrieren Sie den Inhalt vertikal */
   height: 100vh;
 }
 
 /* Logo container */
 .logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 20px;
 }
 
@@ -32,31 +30,30 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
-/* Menu container */
-.menu-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Events container */
+.events-container {
+  margin-top: 20px; /* Platz oberhalb der Event-Boxen */
 }
 
-/* Menu */
-.menu {
-  list-style-type: none;
-  padding: 0;
+/* Event */
+.event {
+  background-color: #add8e6; /* Pastell-Blau */
+  width: 10cm; /* Breite auf 10 cm festlegen */
+  margin-bottom: 10px; /* Abstand zwischen den Event-Boxen */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
-/* Menu item */
-.menu-item {
-  padding: 10px 20px;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  margin: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Event name */
+.event-name {
+  font-family: 'Century Gothic', sans-serif; /* Century Gothic font */
+  text-align: center; /* Center-align event names */
+  margin: 10px 0; /* Platz ober- und unterhalb des Event-Namens */
 }
 
-/* Menu item hover */
-.menu-item:hover {
-  background-color: #e0e0e0;
+/* Event date */
+.event-date {
+  font-size: 14px;
+  color: #333; /* Moderne Schriftfarbe (Dunkelgrau) */
+  text-align: center; /* Center-align event dates */
 }

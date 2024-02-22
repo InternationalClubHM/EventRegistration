@@ -25,4 +25,44 @@ export class EventsComponent {
                           'Sommerrodeln',
                           'Klettergarten',
                           'Abschlussevent Standup-Paddeling mit Grillen an einem See'];
+
+                          eventDates: string[] = [
+                              '01.01.24',
+                              '02.01.24',
+                              '03.01.24',
+                              '01.01.24',
+                              '02.01.24',
+                              '03.01.24',
+                              '01.01.24',
+                              '02.01.24',
+                              '03.01.24',
+                              '01.01.24',
+                              '02.01.24',
+                              '03.01.24',
+                              '02.01.24',
+                              '03.01.24',
+                              '01.01.24',
+                              '02.01.24',
+                              '03.01.24',
+                            ];
+
+                            eventLinks: string[] = [
+                                'link-zu-event-1',
+                                'link-zu-event-2',
+                                'link-zu-event-3',
+                                'link-zu-event-1',
+                                'https://forms.gle/ro6zWEdFdfALpr5G6',
+                                'link-zu-event-3',
+                                'link-zu-event-1',
+                                'link-zu-event-2',
+                                'link-zu-event-3',
+                                'link-zu-event-1',
+                                'link-zu-event-2',
+                                'link-zu-event-3',
+                                'link-zu-event-2',
+                                'link-zu-event-3',
+                                'link-zu-event-1',
+                                'link-zu-event-2',
+                                'link-zu-event-3',
+                              ];
 }
