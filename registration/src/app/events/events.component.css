@@ -1,4 +1,7 @@
-/* events.component.css */
+/* events.component.scss */
+
+/* Importieren Sie Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* Reset */
 * {
@@ -11,7 +14,7 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Zentrieren Sie den Inhalt vertikal */
+  align-items: center;
   height: 100vh;
 }
 
@@ -25,35 +28,42 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  object-fit: cover; /* Maintain aspect ratio */
-  border: 3px solid #ffffff; /* White border */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  object-fit: cover;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Events container */
 .events-container {
-  margin-top: 20px; /* Platz oberhalb der Event-Boxen */
+  margin-top: 20px;
 }
 
 /* Event */
 .event {
-  background-color: #add8e6; /* Pastell-Blau */
-  width: 10cm; /* Breite auf 10 cm festlegen */
-  margin-bottom: 10px; /* Abstand zwischen den Event-Boxen */
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  width: 10cm; /* Width set to 10 cm */
+  margin-bottom: 10px;
+  border-radius: 50px; /* Much rounder corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  cursor: pointer; /* Zeiger bei Hover */
+  transition: background-color 0.3s ease; /* Animation beim Hover */
+  font-family: 'Roboto', sans-serif; /* Schriftart */
+  color: #ffffff; /* Textfarbe */
+  border: none; /* Kein Rahmen */
+  background: linear-gradient(to right, #98acf8, #8bd4f8, #9be4f8); /* Bläuliche Pastellfarben */
+  text-align: center; /* Zentriert den Text */
 }
 
-/* Event name */
+/* Event Hover-Effekt */
+.event:hover {
+  /* Hier können Sie die gewünschte Aktion für den Hover-Effekt definieren */
+  transform: scale(1.1); /* Beispiel: Button wird beim Hover vergrößert */
+}
+
+/* Event Name */
 .event-name {
-  font-family: 'Century Gothic', sans-serif; /* Century Gothic font */
-  text-align: center; /* Center-align event names */
-  margin: 10px 0; /* Platz ober- und unterhalb des Event-Namens */
-}
-
-/* Event date */
-.event-date {
-  font-size: 14px;
-  color: #333; /* Moderne Schriftfarbe (Dunkelgrau) */
-  text-align: center; /* Center-align event dates */
+  font-size: 1.5em; /* Größe des Eventnamens */
+  color: #3b5998; /* Dunkelblau-Pastellfarbe */
+  text-decoration: none; /* Entfernt die Unterstreichung, die normalerweise für Links verwendet wird */
+  cursor: default; /* Setzt den Cursor auf den Standard, um anzuzeigen, dass es sich nicht um einen Link handelt */
 }
