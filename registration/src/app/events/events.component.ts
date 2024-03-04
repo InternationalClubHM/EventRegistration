@@ -8,18 +8,18 @@ import { Component } from '@angular/core';
 export class EventsComponent {
   eventNames: string[] = [
     'Bavarian Brunch',
-    'City Rallye',
+    'City Rally',
     'Residenz',
     'Schloss Neuschwanstein',
     'Bodensee Boat Trip',
     'Tour Olympic Roofs',
     'Tour Olympic Roofs',
-    'TBA',
+    'Sailing',
     'Zugspitze',
     'Rafting',
     'KZ Dachau (Concentration Camp)',
     'Hiking (Partnachklamm)',
-    'Summer sledding',
+    'Summer Sledding',
     'High Ropes Course',
     'Last Event: Standup-Paddeling at a lake with BBQ'
   ];
@@ -27,7 +27,7 @@ export class EventsComponent {
   eventDates: string[] = [
     'Saturday, 9th of March 2024',
     'Saturday, 16th of March 2024',
-    'tba',
+    'Saturday, 30th of March 2024',
     'Saturday, 13th of April 2024',
     'Saturday, 20th of April 2024',
     'Saturday, 27th of April 2024',
@@ -35,7 +35,7 @@ export class EventsComponent {
     'Saturday 11th of May 2024',
     'Friday 17th of May - Monday 20th of May',
     'Saturday 18th of May 2024',
-    'tba',
+    'Saturday, 25th of May 2024',
     'Saturday 8th of June 2024',
     'Saturday 15th of June 2024',
     'Saturday 22nd of June 2024',
@@ -44,7 +44,7 @@ export class EventsComponent {
 
   eventLinks: string[] = [
     'https://forms.gle/NSfaSj9MCsJSHNXB7',
-    'link-zu-event-3',
+    'https://forms.gle/GzhxL169Ty94Uxin8',
     'link-zu-event-1',
     'link-zu-event-1',
     'link-zu-event-3',
@@ -53,7 +53,7 @@ export class EventsComponent {
     'link-zu-event-1',
     'link-zu-event-2',
     'link-zu-event-3',
-    'link-zu-event-2',
+    'https://forms.gle/gbhBg3HeXsUrvUWz9',
     'link-zu-event-3',
     'link-zu-event-1',
     'link-zu-event-2',
