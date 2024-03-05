@@ -44,7 +44,7 @@ export class EventsComponent {
 
   eventLinks: string[] = [
     'https://forms.gle/NSfaSj9MCsJSHNXB7',
-    'https://forms.gle/GzhxL169Ty94Uxin8',
+    'https://docs.google.com/forms/d/e/1FAIpQLScC0SGKfuE1lh4bVllzTJRv3UFMtJ83iJVcrOxynIKgd0h8lQ/viewform?usp=sf_link',
     'link-zu-event-1',
     'link-zu-event-1',
     'link-zu-event-3',
