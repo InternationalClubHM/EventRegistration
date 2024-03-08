@@ -20,9 +20,11 @@ jobs:
 
     - name: Install dependencies
       run: npm install
+      working-directory: ./EventRegistration  # Set the working directory to your Angular project
 
     - name: Build and Deploy
       run: |
         npm run build --base-href "https://internationalclubhm.github.io/EventRegistration/"
-        ls
         npx angular-cli-ghpages --dir=dist/EventRegistration
+      working-directory: ./EventRegistration  # Set the working directory to your Angular project
+
