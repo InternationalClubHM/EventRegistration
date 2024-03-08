@@ -10,19 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
 
-      - name: Install dependencies
-        run: npm install
+    - name: Install dependencies
+      run: npm install
+      working-directory: ./EventRegistration  # Set the working directory to your Angular project
 
-      - name: Build and Deploy
-        run: |
-          npm run build --base-href "https://internationalclubhm.github.io/EventRegistration/"
-          ls
-          npx angular-cli-ghpages --dir=dist/EventRegistration
+    - name: Build and Deploy
+      run: |
+        npm run build --base-href "https://internationalclubhm.github.io/EventRegistration/"
+        npx angular-cli-ghpages --dir=dist/EventRegistration
+      working-directory: ./EventRegistration  # Set the working directory to your Angular project
