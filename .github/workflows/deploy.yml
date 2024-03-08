@@ -16,14 +16,15 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: '20'  # Aktualisiert auf Node.js 20
 
-    - name: Install dependencies
-      run: npm install
-      working-directory: ./EventRegistration  # Set the working directory to your Angular project
-
-    - name: Build and Deploy
+    - name: Install dependencies and Build
+      working-directory: ./EventRegistration  # Arbeitsverzeichnis auf das Hauptverzeichnis des Projekts setzen
       run: |
-        npm run build --base-href "https://internationalclubhm.github.io/EventRegistration/"
-        npx angular-cli-ghpages --dir=dist/EventRegistration
-      working-directory: ./EventRegistration  # Set the working directory to your Angular project
+        npm install
+        npm run build -- --prod --base-href "https://internationalclubhm.github.io/EventRegistration/"
+
+    - name: Deploy
+      working-directory: ./EventRegistration  # Arbeitsverzeichnis auf das Hauptverzeichnis des Projekts setzen
+      run: npx angular-cli-ghpages --dir=dist/EventRegistration
+
