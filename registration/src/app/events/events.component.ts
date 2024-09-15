@@ -96,6 +96,4 @@ export class EventsComponent implements OnInit {
   openEventLink(link: string): void {
     window.open(link, '_blank');
   }
-
-  protected readonly Date = Date;
 }
