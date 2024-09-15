@@ -13,12 +13,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
 }
 
 /* Logo container */
 .logo-container {
-  padding: 20px;
+  margin-bottom: 20px;
   position: relative; /* Stellen Sie sicher, dass die Position relativ ist, um das Absolute innerhalb davon zu positionieren */
 }
 
@@ -65,35 +64,54 @@
 
 /* Events container */
 .events-container {
-  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Die Knöpfe werden untereinander angereiht */
+  justify-content: center; /* Die Knöpfe werden mittig angereiht */
 }
 
 /* Event */
-.event {
-  width: 10cm; /* Width set to 10 cm */
-  margin-bottom: 10px;
+.event-button {
+  width: min(14cm, 95vw); /* Width set to 14 cm or nearly the full screen width */
+  margin: 10px auto;
   border-radius: 50px; /* Much rounder corners */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  cursor: pointer; /* Zeiger bei Hover */
   transition: background-color 0.3s ease; /* Animation beim Hover */
   font-family: 'Roboto', sans-serif; /* Schriftart */
-  color: #ffffff; /* Textfarbe */
   border: none; /* Kein Rahmen */
-  background: linear-gradient(to right, #98acf8, #8bd4f8, #9be4f8); /* Bläuliche Pastellfarben */
   text-align: center; /* Zentriert den Text */
 }
 
+.event-future {
+  background: linear-gradient(to right, #98acf8, #8bd4f8, #9be4f8); /* Bläuliche Pastellfarben */
+}
+
+.event-past {
+  background: linear-gradient(to right, #66bb6a, #81c784, #a3e5ae); /* Grünlicher Hintergrund */
+  font-size: 0.55em;
+  width: min(10cm, 70vw);
+}
+
+.event-button[disabled] {
+  opacity: 0.6; /* Deaktivierte Knöpfe sind durchsichtig (ausgegraut), damit erkannt wird, dass sie deaktiviert sind. */
+}
+
 /* Event Hover-Effekt */
-.event:hover {
+.event-button:not([disabled]):hover {
   /* Hier können Sie die gewünschte Aktion für den Hover-Effekt definieren */
+  cursor: pointer; /* Zeiger bei Hover */
   transform: scale(1.1); /* Beispiel: Button wird beim Hover vergrößert */
 }
 
 /* Event Name */
 .event-name {
-  font-size: 1.5em; /* Größe des Eventnamens */
+  font-size: 1.8em; /* Größe des Eventnamens */
   color: #3b5998; /* Dunkelblau-Pastellfarbe */
   text-decoration: none; /* Entfernt die Unterstreichung, die normalerweise für Links verwendet wird */
-  cursor: default; /* Setzt den Cursor auf den Standard, um anzuzeigen, dass es sich nicht um einen Link handelt */
+}
+
+.event-date {
+  font-size: 1.3em; /* Größe des Eventnamens */
+  color: #ffffff; /* Textfarbe des Datums */
 }

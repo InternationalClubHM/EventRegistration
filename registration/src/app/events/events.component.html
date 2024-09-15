@@ -9,9 +9,11 @@
     <img src="assets/small-logo.png" alt="Small Logo" class="small-logo">
   </div>
   <div class="events-container">
-    <div class="event" *ngFor="let eventName of eventNames; let i = index">
-      <div [innerHTML]="eventName" (click)="openEventLink(eventLinks[i])" class="event-name"></div>
-      <p class="event-date">{{ eventDates[i] }}</p> <!-- Datum für jedes Event -->
-    </div>
+    <button class="event-button" [ngClass]="dateInFuture(getDates(eventDates[i])[0]) ? 'event-future': 'event-past'"
+            *ngFor="let eventName of eventNames; let i = index" (click)="openEventLink(eventLinks[i])"
+            [disabled]="eventLinks[i] === '' || !dateInFuture(getDates(eventDates[i])[0])">
+      <div [innerHTML]="eventName" class="event-name"></div>
+      <p class="event-date">{{ buildDateString(getDates(eventDates[i])) }}</p> <!-- Datum für jedes Event -->
+    </button>
   </div>
 </div>
