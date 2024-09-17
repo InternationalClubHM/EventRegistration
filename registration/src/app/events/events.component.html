@@ -8,12 +8,64 @@
     </div>
     <img src="assets/small-logo.png" alt="Small Logo" class="small-logo">
   </div>
-  <div class="events-container">
-    <button class="event-button" [ngClass]="dateInFuture(getDates(eventDates[i])[0]) ? 'event-future': 'event-past'"
-            *ngFor="let eventName of eventNames; let i = index" (click)="openEventLink(eventLinks[i])"
-            [disabled]="eventLinks[i] === '' || !dateInFuture(getDates(eventDates[i])[0])">
-      <div [innerHTML]="eventName" class="event-name"></div>
-      <p class="event-date">{{ buildDateString(getDates(eventDates[i])) }}</p> <!-- Datum für jedes Event -->
+
+  <button class="toggle-calendar-button" *ngIf="!calendarShowing" (click)="calendarShowing = true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+      <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+      <path fill="#34495e"
+            d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z"/>
+    </svg>
+    Show Calendar
+  </button>
+
+  <button class="toggle-calendar-button" *ngIf="calendarShowing" (click)="calendarShowing = false">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#34495e" d="M0 192l176 0L176 0 160 0C71.6 0 0 71.6 0 160l0 32zm0 32L0 352c0 88.4 71.6 160 160 160l64 0c88.4 0 160-71.6 160-160l0-128-192 0L0 224zm384-32l0-32C384 71.6 312.4 0 224 0L208 0l0 192 176 0z"/></svg>
+    Button View
+  </button>
+
+  <div class="events-container" *ngIf="!calendarShowing">
+    <button class="event-button" [ngClass]="dateInFuture(event.dates[0]) ? 'event-future': 'event-past'"
+            *ngFor="let event of events" (click)="openEventLink(event.link)"
+            [disabled]="event.link === '' || !dateInFuture(event.dates[0])">
+      <div [innerHTML]="event.name" class="event-name"></div>
+      <p class="event-date">{{ buildDateString(event.dates) }}</p> <!-- Datum für jedes Event -->
     </button>
+  </div>
+
+  <div class="calendar" *ngIf="calendarShowing">
+    <div class="calendar-title">
+      <button class="calendar-navigation" (click)="updateCalendarIndex(-1)">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path fill="#7d7d7d"
+                d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+        </svg>
+      </button>
+      <h1>Event Overview {{ currentCalendar?.month }}</h1>
+      <button class="calendar-navigation" (click)="updateCalendarIndex(+1)">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path fill="#7d7d7d"
+                d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+        </svg>
+      </button>
+    </div>
+    <ul>
+      <li class="weekday">M</li>
+      <li class="weekday">T</li>
+      <li class="weekday">W</li>
+      <li class="weekday">T</li>
+      <li class="weekday">F</li> <!--          [ngClass]="day.currentMonth ? '': 'another-month'"-->
+      <!--          [ngClass]="day.today ? 'today': ''"-->
+      <li class="weekday">S</li>
+      <li class="weekday">S</li>
+      <li class="calendar-day" *ngFor="let day of currentCalendar?.days"
+          [ngClass]="{'another-month' : !day.currentMonth, 'today': day.today, 'calendar-event-clickable': day.event && day.event.link !== '', 'calendar-event': day.event }"
+          (click)="(day.event) ? openEventLink(day.event.link) : ''"
+      >
+        <time [dateTime]="day.date.toISOString().split('T')[0]">{{ day.date.getDate() }}</time>
+        {{ day.event?.name }}
+      </li>
+    </ul>
   </div>
 </div>

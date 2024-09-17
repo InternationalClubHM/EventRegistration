@@ -17,24 +17,36 @@
 
 /* Logo container */
 .logo-container {
-  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: end;*/
+  margin-bottom: 10px;
+  margin-top: 10px;
   position: relative; /* Stellen Sie sicher, dass die Position relativ ist, um das Absolute innerhalb davon zu positionieren */
 }
 
 /* Logo */
 .logo {
+  background-color: white;
   width: 200px; /* Ändern Sie die Breite des Logos nach Bedarf */
   height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 }
 
 /* Circle */
 .circle {
   position: relative;
   display: inline-block;
+
+  /*left: 50%;*/
+  /*transform: translateX(-50%); !* Center the first element *!*/
 }
 
 /* Logo Text */
@@ -53,14 +65,41 @@
 }
 
 
-
-
-
 /* Small Logo */
 .small-logo {
   width: 50px; /* Ändern Sie die Breite des kleinen Logos nach Bedarf */
   height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
 }
+
+.toggle-calendar-button {
+  color: #34495e;
+  margin: 20px;
+  padding: min(25px, 4vw);
+  border-radius: 50px; /* Rounder corners */
+  font-size: 20px;
+  font-weight: 600;
+
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  box-shadow: 0 min(8px, 0.8vw) min(32px, 3.2vw) 0 rgba(31, 38, 135, 0.37);
+  cursor: pointer;
+
+  /*For the icon to be centered*/
+  display: flex;
+  align-items: center;
+
+  svg {
+    position: relative;
+    margin-right: 8px;
+    height: 25px;
+    bottom: 1px
+  }
+}
+
+.toggle-calendar-button:hover {
+    box-shadow: 0 min(8px, 0.8vw) min(32px, 3.2vw) 0 rgba(31, 38, 135, 0.6);
+}
+
 
 /* Events container */
 .events-container {
@@ -84,7 +123,7 @@
 }
 
 .event-future {
-  background: linear-gradient(to right, #98acf8, #8bd4f8, #9be4f8); /* Bläuliche Pastellfarben */
+  background: linear-gradient(to right, hsl(226, 88%, 60%), hsl(192, 88%, 60%), hsl(188, 88%, 60%)); /* Bläuliche Pastellfarben */
 }
 
 .event-past {
@@ -97,8 +136,9 @@
   opacity: 0.6; /* Deaktivierte Knöpfe sind durchsichtig (ausgegraut), damit erkannt wird, dass sie deaktiviert sind. */
 }
 
+
 /* Event Hover-Effekt */
-.event-button:not([disabled]):hover {
+.event-button:not([disabled]):hover, .calendar-event-clickable:hover {
   /* Hier können Sie die gewünschte Aktion für den Hover-Effekt definieren */
   cursor: pointer; /* Zeiger bei Hover */
   transform: scale(1.1); /* Beispiel: Button wird beim Hover vergrößert */
@@ -107,11 +147,131 @@
 /* Event Name */
 .event-name {
   font-size: 1.8em; /* Größe des Eventnamens */
-  color: #3b5998; /* Dunkelblau-Pastellfarbe */
+  color: #34495e; /* Dunkelblau-Pastellfarbe */
   text-decoration: none; /* Entfernt die Unterstreichung, die normalerweise für Links verwendet wird */
 }
 
 .event-date {
   font-size: 1.3em; /* Größe des Eventnamens */
-  color: #ffffff; /* Textfarbe des Datums */
+  font-style: italic;
+  color: #f0f0f0; /* Textfarbe des Datums */
+}
+
+
+.calendar-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+
+
+  .calendar-navigation {
+    flex: 1;
+    padding: min(10px, 1.0vw);
+    max-width: min(200px, 15vw);
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    text-align: center;
+    border-radius: min(10px, 1.0vw); /* Rounder corners */
+    box-shadow: 0 min(8px, 0.8vw) min(32px, 3.2vw) 0 rgba(31, 38, 135, 0.37);
+    cursor: pointer;
+
+    svg {
+      padding: 0;
+      height: min(40px, 3vw);
+      width: min(40px, 3vw);
+    }
+  }
+
+  .calendar-navigation:hover {
+    box-shadow: 0 min(8px, 0.8vw) min(32px, 3.2vw) 0 rgba(31, 38, 135, 0.6);
+  }
+
+  h1 {
+    font-size: min(55px, 5vw);
+    flex: 2;
+    font-weight: 800;
+    font-family: 'Brush Script MT', cursive;
+  }
+
+}
+
+
+.calendar {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-family: "Gill Sans Extrabold", sans-serif;
+  margin-bottom: min(20px, 1vw);
+
+  ul {
+    margin-top: min(20px, 2vh);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    list-style: none;
+
+    li {
+      display: flex;
+      width: min(10rem, 12vw);
+      flex-flow: column;
+      padding: min(1.5rem, 1.5vw);
+      margin: min(0.25rem, 0.3vw);
+      font-weight: 300;
+      box-sizing: border-box;
+      border-radius: min(30px, 3vw);
+
+      /*backdrop-filter: blur(min(4px, 0.4vw));*/
+      /*-webkit-backdrop-filter: blur(min(4px, 0.4vw));*/
+      /*border: min(1px, 0.1vw) solid rgba(255, 255, 255, 0.18);*/
+    }
+
+    .weekday {
+      font-size: min(2.1rem, 2.1vw);
+      padding: min(1.2rem, 1.2vw) min(0.9rem, 0.9vw);
+      text-align: center;
+      background: #377173;
+      color: white;
+      font-family: 'Brush Script MT', cursive;
+    }
+
+
+    .calendar-day {
+      background: rgba(255, 255, 255, 0.4);
+      height: min(10rem, 12vw);
+      font-size: min(0.8rem, 1.3vw);
+      line-height: min(23px, 1.8vw);
+      overflow: hidden;
+
+
+      time {
+        font-size: min(2rem, 1.9vw);
+        margin: 0 0 min(0.7rem, 0.7vw) 0;
+        font-weight: 500;
+      }
+    }
+
+    @media (max-aspect-ratio: 0.8) {
+      .calendar-day {
+        height: min(10rem, 20vw);
+      }
+    }
+
+    .calendar-event {
+      background: #97c260;
+    }
+
+    .today {
+      time {
+        font-weight: 800;
+      }
+
+      background: #ffffff70;
+    }
+
+    .another-month {
+      opacity: 0.5;
+    }
+  }
 }
