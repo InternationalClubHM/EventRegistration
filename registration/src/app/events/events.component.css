@@ -44,9 +44,6 @@
 .circle {
   position: relative;
   display: inline-block;
-
-  /*left: 50%;*/
-  /*transform: translateX(-50%); !* Center the first element *!*/
 }
 
 /* Logo Text */
@@ -116,7 +113,6 @@
   border-radius: 50px; /* Much rounder corners */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  transition: background-color 0.3s ease; /* Animation beim Hover */
   font-family: 'Roboto', sans-serif; /* Schriftart */
   border: none; /* Kein Rahmen */
   text-align: center; /* Zentriert den Text */
@@ -189,10 +185,12 @@
   }
 
   h1 {
-    font-size: min(55px, 5vw);
+    font-size: min(55px, 4.5vw);
     flex: 2;
     font-weight: 800;
     font-family: 'Brush Script MT', cursive;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
 }
@@ -203,7 +201,7 @@
   flex-flow: column;
   align-items: center;
   font-family: "Gill Sans Extrabold", sans-serif;
-  margin-bottom: min(20px, 1vw);
+  margin-bottom: min(100px, 10vw);
 
   ul {
     margin-top: min(20px, 2vh);
@@ -259,7 +257,7 @@
     }
 
     .calendar-event {
-      background: #97c260;
+      background: rgba(151, 194, 96, 0.8);
     }
 
     .today {
@@ -267,7 +265,11 @@
         font-weight: 800;
       }
 
-      background: #ffffff70;
+      background: #ffffff99;
+    }
+
+    .calendar-event.today {
+      background: rgba(151, 194, 96, 1);
     }
 
     .another-month {
