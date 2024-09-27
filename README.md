@@ -1,10 +1,3 @@
-# Deployment
+# Production Branch
 
-### 1. Build
-
-ng build --base-href "https://internationalclubhm.github.io/EventRegistration/"
-
-### 2. Commit & Push
-
-
-
+Everything committed here will be automatically deployed.
