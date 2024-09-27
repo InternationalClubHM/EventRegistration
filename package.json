@@ -4,10 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href https://internationalclubhm.github.io/EventRegistration/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "build-and-deploy": "ng build --base-href 'https://internationalclubhm.github.io/EventRegistration/' && npx angular-cli-ghpages --dir=dist/your-project-name"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
