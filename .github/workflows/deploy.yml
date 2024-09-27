@@ -10,7 +10,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with:
         node-version: '20'
     - name: Install dependencies and Build
@@ -18,7 +18,7 @@ jobs:
         npm ci
         npm run build --prod --base-href https://internationalclubhm.github.io/EventRegistration/
     - name: Deploy
-      run: npx angular-cli-ghpages --dir=dist/EventRegistration
+      run: npx angular-cli-ghpages --dir=docs
       env: # CI: true means clean install
         CI: true
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
