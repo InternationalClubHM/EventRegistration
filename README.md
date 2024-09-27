@@ -1,10 +1,2 @@
-# Deployment
-
-### 1. Build
-
-ng build --base-href "https://internationalclubhm.github.io/EventRegistration/"
-
-### 2. Commit & Push
-
-
-
+# GitHub-Pages Branch
+Here lands the built content which will be deployed on GitHub pages.
