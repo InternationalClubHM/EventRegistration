@@ -18,7 +18,7 @@ jobs:
         npm ci
         npm run build --prod
     - name: Deploy
-      run: npx angular-cli-ghpages --dir=docs --no-silent
+      run: npx angular-cli-ghpages --dir=docs --no-silent --name="InternationalClubHM" --email="160766551+InternationalClubHM@users.noreply.github.com"
       env: # CI: true means clean install
         CI: true
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
