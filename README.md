@@ -1,3 +1,2 @@
-# Production Branch
-
-Everything committed here will be automatically deployed.
+# Development Branch
+This branch is mainly used in a development environment. For automatic deployment on GitHub pages, it is merged into the production branch.
