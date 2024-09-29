@@ -2,9 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
 interface Event {
+  type: string, // May be: event, hike, gtg, cafe (language café), potluck (potluck & game night)
   name: string,
   dates: Date[],
-  link: string
+  link: string | undefined
 }
 
 interface CalendarInfo {
@@ -15,14 +16,14 @@ interface CalendarInfo {
 @Component({
   selector: 'app-events',
   templateUrl: './events.component.html',
-  styleUrls: ['./events.component.scss']
+  styleUrls: ['./events.component.scss', './events_calendar.scss'],
 })
 
 export class EventsComponent implements OnInit {
   events: Event[] = [];
   currentCalendar: CalendarInfo | undefined = undefined
   currentCalendarIndex = 0
-  calendarShowing = false
+  calendarShowing = true
 
   constructor(private http: HttpClient) {
   }
@@ -33,9 +34,10 @@ export class EventsComponent implements OnInit {
         const lines = data.split('\n');
         lines.forEach(line => {
           if (line.trim() !== '') {
-            const [eventName, eventDate, eventLink] = line.trim().split(';');
+            const [eventType, eventName, eventDate, eventLink] = line.split(';').map(it => it.trim());
 
             this.events.push({
+              type: eventType,
               name: eventName,
               dates: this.getDates(eventDate),
               link: eventLink,
@@ -45,6 +47,10 @@ export class EventsComponent implements OnInit {
           }
         });
       });
+  }
+
+  eventsForRegistration() {
+    return this.events.filter(event => event.type === "event")
   }
 
   updateCalendarIndex(addition: number) {
@@ -116,8 +122,8 @@ export class EventsComponent implements OnInit {
   }
 
 
-  openEventLink(link: string): void {
-    if (link != '') {
+  openEventLink(link: string | undefined): void {
+    if (link && link !== '') {
       window.open(link, '_blank');
     }
   }
@@ -197,5 +203,16 @@ export class EventsComponent implements OnInit {
       month: `${month} ${year}`,
       days: days
     }
+  }
+
+  subscribeToCalendar() {
+    const calendarURL = window.location.href + "assets/IClub_events.ics"
+
+    // Copy the calendar url
+    navigator.clipboard.writeText(calendarURL).then(() => {
+      alert("Successfully copied the calendar url. Paste it in your calendar settings to subscribe to the feed.")
+    }).catch(() => {
+      alert("Could not copy the url. Please copy it from here and paste it in your calendar settings: " + calendarURL)
+    });
   }
 }

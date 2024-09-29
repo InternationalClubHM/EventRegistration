@@ -9,7 +9,7 @@
     <img src="assets/small-logo.png" alt="Small Logo" class="small-logo">
   </div>
 
-  <button class="toggle-calendar-button" *ngIf="!calendarShowing" (click)="calendarShowing = true">
+  <button class="toggle-calendar-button casual-button" *ngIf="!calendarShowing" (click)="calendarShowing = true">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
       <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
       <path fill="#34495e"
@@ -18,15 +18,19 @@
     Show Calendar
   </button>
 
-  <button class="toggle-calendar-button" *ngIf="calendarShowing" (click)="calendarShowing = false">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#34495e" d="M0 192l176 0L176 0 160 0C71.6 0 0 71.6 0 160l0 32zm0 32L0 352c0 88.4 71.6 160 160 160l64 0c88.4 0 160-71.6 160-160l0-128-192 0L0 224zm384-32l0-32C384 71.6 312.4 0 224 0L208 0l0 192 176 0z"/></svg>
+  <button class="toggle-calendar-button casual-button" *ngIf="calendarShowing" (click)="calendarShowing = false">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+      <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+      <path fill="#34495e"
+            d="M0 192l176 0L176 0 160 0C71.6 0 0 71.6 0 160l0 32zm0 32L0 352c0 88.4 71.6 160 160 160l64 0c88.4 0 160-71.6 160-160l0-128-192 0L0 224zm384-32l0-32C384 71.6 312.4 0 224 0L208 0l0 192 176 0z"/>
+    </svg>
     Button View
   </button>
 
   <div class="events-container" *ngIf="!calendarShowing">
     <button class="event-button" [ngClass]="dateInFuture(event.dates[0]) ? 'event-future': 'event-past'"
-            *ngFor="let event of events" (click)="openEventLink(event.link)"
-            [disabled]="event.link === '' || !dateInFuture(event.dates[0])">
+            *ngFor="let event of eventsForRegistration()" (click)="openEventLink(event.link)"
+            [disabled]="!event.link || !dateInFuture(event.dates[0])">
       <div [innerHTML]="event.name" class="event-name"></div>
       <p class="event-date">{{ buildDateString(event.dates) }}</p> <!-- Datum für jedes Event -->
     </button>
@@ -60,12 +64,28 @@
       <li class="weekday">S</li>
       <li class="weekday">S</li>
       <li class="calendar-day" *ngFor="let day of currentCalendar?.days"
-          [ngClass]="{'another-month' : !day.currentMonth, 'today': day.today, 'calendar-event-clickable': day.event && day.event.link !== '', 'calendar-event': day.event }"
-          (click)="(day.event) ? openEventLink(day.event.link) : ''"
+          [ngClass]="{
+          'another-month' : !day.currentMonth,
+          'today': day.today,
+          'calendar-event-clickable': day.event?.link,
+          'calendar-event': day.event,
+          'calendar-event-with-registration': day.event?.type === 'event',
+          'hike': day.event?.type === 'hike',
+          'gtg': day.event?.type === 'gtg',
+          'cafe': day.event?.type === 'cafe',
+          'potluck': day.event?.type === 'potluck'
+          }"
+          (click)="openEventLink(day.event?.link)"
       >
         <time [dateTime]="day.date.toISOString().split('T')[0]">{{ day.date.getDate() }}</time>
         {{ day.event?.name }}
       </li>
     </ul>
+
+    <div class="buttons-below-calendar">
+      <a class="button-add-to-calendar casual-button" href="assets/IClub_events.ics" download="IClub_events.ics">Add to your calendar</a>
+      <a class="button-add-to-calendar casual-button" (click)="subscribeToCalendar()">Subscribe to calendar</a>
+    </div>
+
   </div>
 </div>

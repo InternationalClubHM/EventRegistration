@@ -68,17 +68,23 @@
   height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
 }
 
-.toggle-calendar-button {
-  color: #34495e;
+
+.casual-button {
+  text-align: center;
+  text-decoration: none;
   margin: 20px;
   padding: min(25px, 4vw);
   border-radius: 50px; /* Rounder corners */
   font-size: 20px;
   font-weight: 600;
-
-  background: rgba(255, 255, 255, 0.5);
   border: none;
+  cursor: pointer;
   box-shadow: 0 min(8px, 0.8vw) min(32px, 3.2vw) 0 rgba(31, 38, 135, 0.37);
+}
+
+.toggle-calendar-button {
+  color: #34495e;
+  background: rgba(255, 255, 255, 0.5);
   cursor: pointer;
 
   /*For the icon to be centered*/
@@ -93,7 +99,7 @@
   }
 }
 
-.toggle-calendar-button:hover {
+.casual-button:hover {
   box-shadow: 0 min(8px, 0.8vw) min(32px, 3.2vw) 0 rgba(31, 38, 135, 0.6);
 }
 
@@ -193,87 +199,4 @@
     padding-right: 10px;
   }
 
-}
-
-
-.calendar {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  font-family: "Gill Sans Extrabold", sans-serif;
-  margin-bottom: min(100px, 10vw);
-
-  ul {
-    margin-top: min(20px, 2vh);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    flex-wrap: wrap;
-    list-style: none;
-
-    li {
-      display: flex;
-      width: min(10rem, 12vw);
-      flex-flow: column;
-      padding: min(1.5rem, 1.5vw);
-      margin: min(0.25rem, 0.3vw);
-      font-weight: 300;
-      box-sizing: border-box;
-      border-radius: min(30px, 3vw);
-
-      /*backdrop-filter: blur(min(4px, 0.4vw));*/
-      /*-webkit-backdrop-filter: blur(min(4px, 0.4vw));*/
-      /*border: min(1px, 0.1vw) solid rgba(255, 255, 255, 0.18);*/
-    }
-
-    .weekday {
-      font-size: min(2.1rem, 2.1vw);
-      padding: min(1.2rem, 1.2vw) min(0.9rem, 0.9vw);
-      text-align: center;
-      background: #377173;
-      color: white;
-      font-family: 'Brush Script MT', cursive;
-    }
-
-
-    .calendar-day {
-      background: rgba(255, 255, 255, 0.4);
-      height: min(10rem, 12vw);
-      font-size: min(0.8rem, 1.3vw);
-      line-height: min(23px, 1.8vw);
-      overflow: hidden;
-
-
-      time {
-        font-size: min(2rem, 1.9vw);
-        margin: 0 0 min(0.7rem, 0.7vw) 0;
-        font-weight: 500;
-      }
-    }
-
-    @media (max-aspect-ratio: 0.8) {
-      .calendar-day {
-        height: min(10rem, 20vw);
-      }
-    }
-
-    .calendar-event {
-      background: rgba(151, 194, 96, 0.8);
-    }
-
-    .today {
-      time {
-        font-weight: 800;
-      }
-
-      background: #ffffff99;
-    }
-
-    .calendar-event.today {
-      background: rgba(151, 194, 96, 1);
-    }
-
-    .another-month {
-      opacity: 0.5;
-    }
-  }
 }
