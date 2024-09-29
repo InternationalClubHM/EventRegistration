@@ -4,10 +4,9 @@ event;Bavarian Brunch;21.09.2024;https://forms.gle/L27vKjE8zvdhCfGX7
 hike;Hiking Tegernsee;22.09.2024
 gtg;Hirschgarten;24.09.2024
 gtg;Café Gans am Wasser;26.09.2024
-event;Partnachklamm;28.09.2024;https://forms.gle/JDgugBkqaFct3Uas5
 hike;Hike to the Seekarkreuz;29.09.2024
 cafe;Language Café (Room W0.01);01.10.2024
-gtg;Get2Gether;03.10.2024
+event;Partnachklamm;03.10.2024;https://forms.gle/JDgugBkqaFct3Uas5
 event;Castle Neuschwanstein;05.10.2024;https://forms.gle/fzNQL9exessEtRNr9
 hike;Hiking;06.10.2024
 potluck;Potluck + Game Night (Room W.0.01);08.10.2024
