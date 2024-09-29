@@ -23,7 +23,7 @@ export class EventsComponent implements OnInit {
   events: Event[] = [];
   currentCalendar: CalendarInfo | undefined = undefined
   currentCalendarIndex = 0
-  calendarShowing = true
+  calendarShowing = false
 
   constructor(private http: HttpClient) {
   }
