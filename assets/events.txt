@@ -1,16 +1,46 @@
-Bavarian Brunch;21.09.2024;https://forms.gle/L27vKjE8zvdhCfGX7
-Partnachklamm;28.09.2024;https://forms.gle/JDgugBkqaFct3Uas5
-Castle Neuschwanstein;05.10.2024;https://forms.gle/fzNQL9exessEtRNr9
-Dachau Memorial;12.10.2024;https://forms.gle/KntGSCDZErQq1xvQ8
-Cabin weekend (includes two days of hiking);18.10.2024-20.10.2024;https://forms.gle/ufsE8tLv3BAamDmGA
-Residenz;26.10.2024;https://forms.gle/hvDQwWoSdQMNzzs47
-Zugspitze;02.11.2024;https://forms.gle/b2zBMXHgH84PUqyt9
-GoKarting;03.11.2024;
-Brewery Tour;09.11.2024;
-Therme Erding;16.11.2024;
-Eisstockschießen (Curling);23.11.2024;
-Salzburg Christmas Market;30.11.2024;
-Nuremberg City Tour + Toy Museum +n Christmas Market;01.12.2024;
-Christmas Market Schloss Kaltenberg (Fairytale themed);07.12.2024;
-I-Club Christmas Party;14.12.2024;
-BMW Factory Tour; 27.01.2025; https://forms.gle/fh6uqQeXH2JyrF6w8
+gtg;Café Cava;17.09.2024
+gtg;Augustiner Keller;19.09.2024
+event;Bavarian Brunch;21.09.2024;https://forms.gle/L27vKjE8zvdhCfGX7
+hike;Hiking Tegernsee;22.09.2024
+gtg;Hirschgarten;24.09.2024
+gtg;Café Gans am Wasser;26.09.2024
+event;Partnachklamm;28.09.2024;https://forms.gle/JDgugBkqaFct3Uas5
+hike;Hike to the Seekarkreuz;29.09.2024
+cafe;Language Café (Room W0.01);01.10.2024
+gtg;Get2Gether;03.10.2024
+event;Castle Neuschwanstein;05.10.2024;https://forms.gle/fzNQL9exessEtRNr9
+hike;Hiking;06.10.2024
+potluck;Potluck + Game Night (Room W.0.01);08.10.2024
+gtg;Frau im Mond Rooftop Bar;10.10.2024
+event;Dachau Memorial;12.10.2024;https://forms.gle/KntGSCDZErQq1xvQ8
+hike;Hiking;13.10.2024
+cafe;Language Café (Room W0.01);15.10.2024
+gtg;Get2Gether;17.10.2024
+event;Cabin weekend (includes two days of hiking);18.10.2024-20.10.2024;https://forms.gle/ufsE8tLv3BAamDmGA
+potluck;Potluck + Game Night (Room W.0.01);22.10.2024
+gtg;Get2Gether;24.10.2024
+event;Residenz;26.10.2024;https://forms.gle/hvDQwWoSdQMNzzs47
+cafe;Language Café (Room W0.01);29.10.2024
+gtg;Halloween-Party;31.10.2024
+event;Zugspitze;02.11.2024;https://forms.gle/b2zBMXHgH84PUqyt9
+event;GoKarting;03.11.2024
+potluck;Potluck + Game Night (Room W.0.01);05.11.2024
+gtg;Get2Gether;07.11.2024
+event;Brewery Tour;09.11.2024
+cafe;Language Café (Room W0.01);12.11.2024
+gtg;Get2Gether;14.11.2024
+event;Therme Erding;16.11.2024
+potluck;Potluck + Game Night (Room W.0.01);19.11.2024
+gtg;Get2Gether;21.11.2024
+event;Eisstockschießen (Curling);23.11.2024
+cafe;Language Café (Room W0.01);26.11.2024
+gtg;Get2Gether;28.11.2024
+event;Salzburg Christmas Market;30.11.2024
+event;Nuremberg City Tour + Toy Museum + Christmas Market;01.12.2024
+potluck;Potluck + Game Night (Room W.0.01);03.12.2024
+gtg;Get2Gether;05.12.2024
+event;Christmas Market Schloss Kaltenberg (Fairytale themed);07.12.2024
+cafe;Language Café (Room W0.01);10.12.2024
+gtg;Get2Gether;12.12.2024
+event;I-Club Christmas Party;14.12.2024
+event;BMW Factory Tour;27.01.2025;https://forms.gle/fh6uqQeXH2JyrF6w8
