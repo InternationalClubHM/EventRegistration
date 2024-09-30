@@ -40,3 +40,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# no need to commit due to automatic creation on build
+src/assets/IClub_events.ics
