@@ -22,7 +22,6 @@ event;Residenz;26.10.2024;https://forms.gle/hvDQwWoSdQMNzzs47
 cafe;Language Café (Room W0.01);29.10.2024
 gtg;Halloween-Party;31.10.2024
 event;Zugspitze;02.11.2024;https://forms.gle/b2zBMXHgH84PUqyt9
-event;GoKarting;03.11.2024
 potluck;Potluck + Game Night (Room W.0.01);05.11.2024
 gtg;Get2Gether;07.11.2024
 event;Brewery Tour;09.11.2024
@@ -35,7 +34,7 @@ event;Eisstockschießen (Curling);23.11.2024
 cafe;Language Café (Room W0.01);26.11.2024
 gtg;Get2Gether;28.11.2024
 event;Salzburg Christmas Market;30.11.2024
-event;Nuremberg City Tour + Toy Museum + Christmas Market;01.12.2024
+event;Nuremberg Toy Museum + City Tour + GoKarting + Christmas Market;01.12.2024
 potluck;Potluck + Game Night (Room W.0.01);03.12.2024
 gtg;Get2Gether;05.12.2024
 event;Christmas Market Schloss Kaltenberg (Fairytale themed);07.12.2024
