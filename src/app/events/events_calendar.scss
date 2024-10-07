@@ -31,7 +31,7 @@
       font-size: min(2.1rem, 2.1vw);
       padding: min(1.2rem, 1.2vw) min(0.9rem, 0.9vw);
       text-align: center;
-      background: #377173;
+      background: #574b90;
       color: white;
       font-family: 'Brush Script MT', cursive;
     }
@@ -62,30 +62,31 @@
     .today {
       time {
         font-weight: 800;
+        font-size: min(2.5rem, 2.5vw);
       }
 
-      background: #ffffff99;
+      background: #ffffff;
     }
 
 
     .hike {
-      background: rgb(151, 194, 96);
+      background: #58B19F;
     }
 
     .calendar-event-with-registration {
-      background: #fdcb6e;
+      background: #9AECDB    ;
     }
 
     .gtg {
-      background: lightblue;
+      background: #c55388;
     }
 
     .cafe {
-      background: lightcoral;
+      background: #cd84f1;
     }
 
     .potluck {
-      background: #a29bfe;
+      background: #778beb;
     }
 
     .calendar-event {
