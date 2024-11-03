@@ -21,7 +21,7 @@ gtg;Get2Gether;24.10.2024
 event;Residenz;26.10.2024;https://forms.gle/hvDQwWoSdQMNzzs47
 cafe;Language Café (Room W0.01);29.10.2024
 event;Zugspitze;02.11.2024;https://forms.gle/b2zBMXHgH84PUqyt9
-potluck;Potluck + Game Night (Room W.0.01);05.11.2024
+potluck;Cookie Baking;05.11.2024
 gtg;Get2Gether;07.11.2024
 event;Brewery Tour;09.11.2024;https://forms.gle/eybpkkpxwD5N7azr6
 cafe;Language Café (Room W0.01);12.11.2024
