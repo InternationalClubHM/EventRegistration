@@ -22,18 +22,15 @@ event;Residenz;26.10.2024;https://forms.gle/hvDQwWoSdQMNzzs47
 cafe;Language Café (Room W0.01);29.10.2024
 event;Zugspitze;02.11.2024;https://forms.gle/b2zBMXHgH84PUqyt9
 potluck;Cookie Baking;05.11.2024
-gtg;Get2Gether;07.11.2024
 event;Brewery Tour;09.11.2024;https://forms.gle/eybpkkpxwD5N7azr6
 cafe;Language Café (Room W0.01);12.11.2024
-gtg;Get2Gether;14.11.2024
 event;Therme Erding;16.11.2024
 potluck;Potluck + Game Night (Room W.0.01);19.11.2024
-gtg;Get2Gether;21.11.2024
 event;Eisstockschießen (Curling);23.11.2024
 cafe;Language Café (Room W0.01);26.11.2024
-gtg;Get2Gether;28.11.2024
-event;Salzburg Christmas Market;30.11.2024; https://forms.gle/hE3be2E51RgidKUy6
-event;Nuremberg Toy Museum + City Tour + GoKarting + Christmas Market;01.12.2024; https://forms.gle/ydpTDpT1DD5fKxi39
+gtg;HM-Kino (Mamma Mia);28.11.2024
+event;Salzburg Christmas Market;30.11.2024;https://forms.gle/hE3be2E51RgidKUy6
+event;Nuremberg Toy Museum + City Tour + GoKarting + Christmas Market;01.12.2024;https://forms.gle/ydpTDpT1DD5fKxi39
 potluck;Potluck + Game Night (Room W.0.01);03.12.2024
 gtg;Get2Gether;05.12.2024
 event;Christmas Market Schloss Kaltenberg (Fairytale themed);07.12.2024
