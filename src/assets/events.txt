@@ -26,7 +26,7 @@ event;Brewery Tour;09.11.2024;https://forms.gle/eybpkkpxwD5N7azr6
 cafe;Language Café (Room W0.01);12.11.2024
 event;Therme Erding;16.11.2024;https://forms.gle/mtH1mcBfvpv4ofM36
 potluck;Potluck + Game Night (Room W.0.01);19.11.2024
-event;Eisstockschießen (Curling);23.11.2024
+event;Eisstockschießen (Curling);23.11.2024; https://forms.gle/bQUzzigKwoPyWdJ69
 cafe;Language Café (Room W0.01);26.11.2024
 gtg;HM-Kino (Mamma Mia);28.11.2024
 event;Salzburg Christmas Market;30.11.2024;https://forms.gle/hE3be2E51RgidKUy6
