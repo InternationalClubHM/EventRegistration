@@ -36,5 +36,5 @@ gtg;Get2Gether;05.12.2024
 event;Christmas Market Schloss Kaltenberg (Fairytale themed);07.12.2024;https://forms.gle/qbwC6X1sjkCufw5PA
 cafe;Language Café (Room W0.01);10.12.2024
 gtg;Get2Gether;12.12.2024
-event;I-Club Christmas Party;14.12.2024
+event;I-Club Christmas Party;14.12.2024;https://docs.google.com/forms/d/1YYcvNVtGqR9qBu9o0yT5KvA1PpE9lj4raVfMLgJjWMo/viewform
 event;BMW Factory Tour;27.01.2025;https://forms.gle/fh6uqQeXH2JyrF6w8
