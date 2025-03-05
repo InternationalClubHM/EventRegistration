@@ -12,7 +12,7 @@ hike;Hiking;06.04.2025
 cafe;Language Café (Room W0.01);08.04.2025
 event;BMW Factory Tour;10.04.2025
 gtg;Bouldering;10.04.2025
-event;Wildpark Point;12.04.2025
+event;Wildpark Poing;12.04.2025
 hike;Hiking;13.04.2025
 potluck;Potluck + Game Night (Room W.0.01);15.04.2025
 gtg;I-Club Cinema;17.04.2025
