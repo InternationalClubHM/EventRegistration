@@ -36,11 +36,23 @@ export class EventsComponent implements OnInit {
           if (line.trim() !== '') {
             const [eventType, eventName, eventDate, eventLink] = line.split(';').map(it => it.trim());
 
+            let eventDates = this.getDates(eventDate);
+
+            const in14Days = new Date();
+            in14Days.setDate(in14Days.getDate() + 14);
+
+            // Only set the link if the event is in the next 14 days
+            let link = undefined;
+            if (eventDates[0] < in14Days) {
+              link = eventLink;
+            }
+
+
             this.events.push({
               type: eventType,
               name: eventName,
-              dates: this.getDates(eventDate),
-              link: eventLink,
+              dates: eventDates,
+              link: link,
             })
 
             this.currentCalendar = this.getCalendar(this.currentCalendarIndex)
