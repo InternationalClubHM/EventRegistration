@@ -1,4 +1,4 @@
-event;Bavarian Brunch;20.09.2025;https://forms.gle/AgKwM6gaxNjR7dC48
+event;Bavarian Brunch;19.09.2025;https://forms.gle/AgKwM6gaxNjR7dC48
 hike;Hiking;21.09.2025
 gtg;Picknick Englischer Garten;23.09.2025
 gtg;Café Gans am Wasser;25.09.2025
