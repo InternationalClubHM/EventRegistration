@@ -2,7 +2,6 @@ event;Bavarian Brunch;19.09.2025;https://forms.gle/AgKwM6gaxNjR7dC48
 hike;Hiking;21.09.2025
 gtg;Picknick Englischer Garten;23.09.2025
 gtg;Café Gans am Wasser;25.09.2025
-event;Bavaria Filmstadt;27.09.2025;https://docs.google.com/forms/d/e/1FAIpQLScYvP1bDk1AP6vLy6Aq8o75H2tCBirYOK1HcJp2gDNCZswkog/viewform?usp=dialog
 hike;Hiking;28.09.2025
 gtg;Kulturdachgarten;30.09.2025
 gtg;Get2Gether;02.10.2025
@@ -22,6 +21,7 @@ event;Neuschwanstein Castle;25.10.2025;https://forms.gle/tccKzz1sNnzNVEzK7
 hike;Hiking;26.10.2025
 gtg;Pumpkin carving;28.10.2025
 gtg;Karaoke Night;30.10.2025
+event;Bavaria Filmstadt;31.10.2025;https://docs.google.com/forms/d/e/1FAIpQLScYvP1bDk1AP6vLy6Aq8o75H2tCBirYOK1HcJp2gDNCZswkog/viewform?usp=dialog
 event;Cabin Weekend;01.11.2025-02.11.2025;https://forms.gle/43FW5DXW3ocvziAd7
 gtg;German Museum & Frau im Mond Rooftop Bar;04.11.2025
 gtg;Dart Night;06.11.2025
