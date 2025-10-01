@@ -15,7 +15,7 @@ event;BMW Museum;14.10.2025;https://forms.gle/VJkUGA6nkxAdeXgM8
 gtg;Café Cava;16.10.2025
 event;Zugspitze;18.10.2025;https://forms.gle/ehiZyPQyBo6s4Jjy5
 hike;Hiking;19.10.2025
-potluck;International Kitchen;21.10.2025
+potluck;Potluck & Game Night;21.10.2025
 gtg;Line Dancing @ Lost Weekend;23.10.2025
 event;Neuschwanstein Castle;25.10.2025;https://forms.gle/tccKzz1sNnzNVEzK7
 hike;Hiking;26.10.2025
@@ -35,11 +35,11 @@ gtg;Karaoke Night;18.11.2025
 gtg;Bar Shamrock;20.11.2025
 event;Ice Skating;22.11.2025;https://forms.gle/2KBntaSfCr3KyXBQ7
 gtg;Nymphenburg Castle;23.11.2025
-potluck;International Kitchen;25.11.2025
+potluck;Potluck & Game Night;25.11.2025
 gtg;Baking Cookies;27.11.2025
 event;Nuremberg Christmas Market;29.11.2025;https://forms.gle/oBU5ZaUPd8Y7hCw58
 event;Ice Curling;30.11.2025;https://forms.gle/731y4uHazHWJoGGx6
-potluck;International Kitchen;02.12.2025
+potluck;Potluck & Game Night;02.12.2025
 gtg;Wintertoolwood;04.12.2025
 event;Opera;06.12.2025;https://forms.gle/FCNkHP74ByTk1HFGA
 gtg;Bouldering;07.12.2025
