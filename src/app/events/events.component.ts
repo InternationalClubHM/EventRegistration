@@ -10,7 +10,7 @@ interface Event {
 
 interface CalendarInfo {
   month: string,
-  days: { currentMonth: boolean, today: boolean, date: Date, event: Event | undefined }[]
+  days: { currentMonth: boolean, today: boolean, date: Date, events: Event[] }[]
 }
 
 @Component({
@@ -152,12 +152,12 @@ export class EventsComponent implements OnInit {
       currentMonth: boolean,
       today: boolean,
       date: Date,
-      event: Event | undefined
+      events: Event[]
     } => {
       const isToday = isSameDay(date, new Date())
 
       // Either same day OR second (if exists) date is the same day OR the first date is not in the future but the second is
-      let eventFound = this.events.find(event =>
+      let eventsFound = this.events.filter(event =>
         isSameDay(event.dates[0], date) ||
         (event.dates[1] && (isSameDay(event.dates[1], date) || (event.dates[0] < date && event.dates[1] > date))));
 
@@ -165,7 +165,7 @@ export class EventsComponent implements OnInit {
         currentMonth: currentMonth,
         today: isToday,
         date: date, // Copy the date
-        event: eventFound
+        events: eventsFound
       }
     }
 

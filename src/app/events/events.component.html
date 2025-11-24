@@ -65,25 +65,29 @@
       <li class="weekday">S</li>
       <li class="calendar-day" *ngFor="let day of currentCalendar?.days"
           [ngClass]="{
+            'no-event-day' : day.events.length == 0,
+          }">
+        <div class="event-day calendar-event" *ngFor="let event of day.events"
+             [ngClass]="{
           'another-month' : !day.currentMonth,
           'today': day.today,
-          'calendar-event-clickable': day.event?.link,
-          'calendar-event': day.event,
-          'calendar-event-with-registration': day.event?.type === 'event',
-          'hike': day.event?.type === 'hike',
-          'gtg': day.event?.type === 'gtg',
-          'cafe': day.event?.type === 'cafe',
-          'potluck': day.event?.type === 'potluck'
+          'calendar-event-clickable': event.link,
+          'calendar-event-with-registration': event.type === 'event',
+          'hike': event.type === 'hike',
+          'gtg': event.type === 'gtg',
+          'cafe': event.type === 'cafe',
+          'potluck': event.type === 'potluck'
           }"
-          (click)="openEventLink(day.event?.link)"
-      >
-        <time [dateTime]="day.date.toISOString().split('T')[0]">{{ day.date.getDate() }}</time>
-        {{ day.event?.name }}
+             (click)="openEventLink(event.link)">
+          <time [dateTime]="day.date.toISOString().split('T')[0]">{{ day.date.getDate() }}</time>
+          {{ event.name }}
+        </div>
       </li>
     </ul>
 
     <div class="buttons-below-calendar">
-      <a class="button-add-to-calendar casual-button" href="assets/IClub_events.ics" download="IClub_events.ics">Add to your calendar</a>
+      <a class="button-add-to-calendar casual-button" href="assets/IClub_events.ics" download="IClub_events.ics">Add to
+        your calendar</a>
       <a class="button-add-to-calendar casual-button" (click)="subscribeToCalendar()">Subscribe to calendar</a>
     </div>
 
