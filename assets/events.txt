@@ -29,7 +29,6 @@ event;Residence;08.11.2025;https://forms.gle/b4SP2TAfTczuheZA6
 hike;Hiking;09.11.2025
 potluck;Potluck & Game Night;11.11.2025
 gtg;Bar Niederlassung;13.11.2025
-event;Allianz Arena Tour & Museum;15.11.2025;https://forms.gle/8pBDhhtVAbMDKZCHA
 gtg;Bouldering;16.11.2025
 gtg;Karaoke Night;18.11.2025
 gtg;Bar Shamrock;20.11.2025
@@ -37,10 +36,10 @@ event;Ice Skating;22.11.2025;https://forms.gle/2KBntaSfCr3KyXBQ7
 gtg;Nymphenburg Castle;23.11.2025
 potluck;Potluck & Game Night;25.11.2025
 gtg;Baking Cookies;27.11.2025
-event;Nuremberg Christmas Market;29.11.2025;https://forms.gle/oBU5ZaUPd8Y7hCw58
 event;Ice Curling;30.11.2025;https://forms.gle/731y4uHazHWJoGGx6
 potluck;Potluck & Game Night;02.12.2025
 gtg;Wintertoolwood;04.12.2025
+event;Allianz Arena Tour & Museum;06.12.2025;https://forms.gle/8pBDhhtVAbMDKZCHA
 event;Opera;06.12.2025;https://forms.gle/FCNkHP74ByTk1HFGA
 gtg;Bouldering;07.12.2025
 gtg;Baking Cookies;09.12.2025
