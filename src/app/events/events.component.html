@@ -63,11 +63,8 @@
       <!--          [ngClass]="day.today ? 'today': ''"-->
       <li class="weekday">S</li>
       <li class="weekday">S</li>
-      <li class="calendar-day" *ngFor="let day of currentCalendar?.days"
-          [ngClass]="{
-            'no-event-day' : day.events.length == 0,
-          }">
-        <div class="event-day calendar-event" *ngFor="let event of day.events"
+      <li class="calendar-day" *ngFor="let day of currentCalendar?.days">
+        <div class="event-day calendar-day-content" *ngFor="let event of day.events"
              [ngClass]="{
           'another-month' : !day.currentMonth,
           'today': day.today,
@@ -80,7 +77,16 @@
           }"
              (click)="openEventLink(event.link)">
           <time [dateTime]="day.date.toISOString().split('T')[0]">{{ day.date.getDate() }}</time>
+          <br>
           {{ event.name }}
+        </div>
+
+        <div class="no-event-day calendar-day-content" *ngIf="day.events.length == 0"
+             [ngClass]="{
+              'another-month' : !day.currentMonth,
+              'today': day.today,
+              }">
+          <time [dateTime]="day.date.toISOString().split('T')[0]">{{ day.date.getDate() }}</time>
         </div>
       </li>
     </ul>
