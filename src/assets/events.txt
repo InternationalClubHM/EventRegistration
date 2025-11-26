@@ -44,4 +44,4 @@ event;Opera;06.12.2025;https://forms.gle/FCNkHP74ByTk1HFGA
 gtg;Bouldering;07.12.2025
 gtg;Baking Cookies;09.12.2025
 gtg;Christmas Market;11.12.2025
-event;Christmas Party;12.12.2025;https://forms.gle/k4BWWkuiQXEz5ytK8
+event;Christmas Party;19.12.2025;https://forms.gle/k4BWWkuiQXEz5ytK8
